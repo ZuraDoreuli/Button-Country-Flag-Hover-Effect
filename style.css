@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: url(./bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 30px;
+}
+button {
+  flex: 0 0 250px;
+  position: relative;
+  border: 1px solid #0d1b4a;
+  border-radius: 5px;
+  background-color: #0d1b4a;
+  font-size: 28px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-shadow: 3px 3px 3px #000;
+  box-shadow: #3c40434d 0px 1px 2px 0px, #3c404326 0px 2px 6px 2px;
+  letter-spacing: 1.5px;
+  color: #cccccc;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+button:hover {
+  font-size: 18px;
+  padding: 60px 0;
+  color: #0d1b4a;
+  text-shadow: none;
+}
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s linear;
+}
+span {
+  position: relative;
+  z-index: 3;
+}
+.germany::before {
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 0;
+  background-color: #030303;
+}
+.germany::after {
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #eed603;
+}
+.germany:hover {
+  background-color: #ed0303;
+}
+.germany:hover.germany::before {
+  height: 33%;
+}
+.germany:hover.germany::after {
+  height: 33%;
+}
+.ukraine::before {
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: #0055b9;
+}
+.ukraine::after {
+  width: 100%;
+  height: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ffd900;
+}
+.ukraine:hover.ukraine::before {
+  height: 50%;
+}
+.ukraine:hover.ukraine::after {
+  height: 50%;
+}
+.france::before {
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #002395;
+}
+.france::after {
+  width: 0;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #ed2939;
+}
+.france:hover {
+  background-color: #fff;
+}
+.france:hover.france::before {
+  width: 33%;
+}
+.france:hover.france::after {
+  width: 33%;
+}
+.italy::before {
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #008745;
+}
+.italy::after {
+  width: 0;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #ec2335;
+}
+.italy:hover {
+  background-color: #fff;
+}
+.italy:hover.italy::before {
+  width: 33%;
+}
+.italy:hover.italy::after {
+  width: 33%;
+}
